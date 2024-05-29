@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h4>Change string to Propercase</h4>
+        <div class="random">
+            <input type="text" id="txt">
+            <button  id="btn">Click</button>
+        </div><br>
+        <div class="result" id="result"></div>
+    </div>
+    <script>
+        var text=document.querySelector("#txt");
+        var btn=document.querySelector("#btn");
+        var result=document.querySelector("#result");
+        let front;
+
+        btn.addEventListener("click",()=>{
+        var content = text.value;
+        var word = content.split(" ");
+         for (let i = 0; i < word.length; i++) {
+         front = word[i].charAt(0).toUpperCase()+word[i].slice(1,word[i].length);
+         console.log(front);
+         result.innerText += " " +front;
+         console.log(result);
+    }
+    
+});
+    </script>
+</body>
+</html>
